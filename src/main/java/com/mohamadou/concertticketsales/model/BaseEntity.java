@@ -1,4 +1,4 @@
-package com.mohamadou.concertticketsales.model.concerts;
+package com.mohamadou.concertticketsales.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

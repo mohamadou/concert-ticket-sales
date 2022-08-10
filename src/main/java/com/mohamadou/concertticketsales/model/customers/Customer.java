@@ -1,9 +1,10 @@
 package com.mohamadou.concertticketsales.model.customers;
 
-import com.mohamadou.concertticketsales.model.concerts.BaseEntity;
+import com.mohamadou.concertticketsales.model.BaseEntity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Getter
@@ -11,6 +12,7 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "customers")
 public class Customer extends BaseEntity {
     private String customerName;
     private String email;

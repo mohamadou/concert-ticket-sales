@@ -1,12 +1,13 @@
 package com.mohamadou.concertticketsales.model.tickets;
 
-import com.mohamadou.concertticketsales.model.concerts.BaseEntity;
+import com.mohamadou.concertticketsales.model.BaseEntity;
 import com.mohamadou.concertticketsales.model.concerts.Concert;
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "tickets")
 public class Ticket extends BaseEntity {
     private String serialNumber;
 

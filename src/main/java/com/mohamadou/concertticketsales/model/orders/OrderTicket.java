@@ -1,23 +1,25 @@
 package com.mohamadou.concertticketsales.model.orders;
 
-import com.mohamadou.concertticketsales.model.concerts.BaseEntity;
+import com.mohamadou.concertticketsales.model.BaseEntity;
 import com.mohamadou.concertticketsales.model.tickets.Ticket;
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@NoArgsConstructor
+@Table(name = "order_tickets")
 public class OrderTicket extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;
+    private CustomerOrder order;
 
     @ManyToOne
     @JoinColumn(name = "ticket_id")
